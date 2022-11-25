@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn ./src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "test:cov": "npx nyc ts-mocha -p tsconfig.json --parallel  src/**/*.spec.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,10 +23,18 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.10",
+    "@types/expect": "^24.3.0",
     "@types/express": "^4.17.11",
     "@types/jsonwebtoken": "^8.5.1",
+    "@types/mocha": "^10.0.0",
     "@types/node": "^14.14.35",
+    "@types/supertest": "^2.0.12",
     "@types/uuid": "^8.3.0",
+    "dotenv": "^16.0.3",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "supertest": "^6.3.1",
+    "ts-mocha": "^10.0.0",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3"
   }
